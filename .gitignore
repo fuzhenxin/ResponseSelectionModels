@@ -1,0 +1,8 @@
+*.pyc
+data_*
+*/*.pyc
+data
+log/*
+output*
+main_*.py
+result_record.txt
