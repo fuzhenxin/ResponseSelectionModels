@@ -75,10 +75,10 @@ def train(conf, _model):
                     _model.turns1: train_batches["turns1"][batch_index],
                     _model.tt_turns_len1: train_batches["tt_turns_len1"][batch_index],
                     _model.every_turn_len1: train_batches["every_turn_len1"][batch_index],
-                    _model.response: train_batches["response"][batch_index], 
+                    _model.response: train_batches["response"][batch_index],
                     _model.response_len: train_batches["response_len"][batch_index],
                     _model.label: train_batches["label"][batch_index],
-                    _model.keep_rate: 1.0,
+                    _model.keep_rate: conf["keep_rate"],
                 }
 
                 _, curr_loss = sess.run([g_updates, loss], feed_dict = feed)

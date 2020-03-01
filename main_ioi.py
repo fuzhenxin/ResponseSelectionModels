@@ -39,7 +39,7 @@ else:
 
 conf = {
     "data_path": data_pre + "/data.pkl",
-    "save_path": output_pre + "/results_"+data_name+"_cr_"+model_name,
+    "save_path": output_pre + "/results_"+data_name+"_cr_"+model_name+"_3",
     "word_emb_init": data_pre + "/emb.pkl",
     "init_model": init_model,
     "data_name": data_name,
@@ -51,14 +51,14 @@ conf = {
     "print_step": 1000,
 
     "decay_step": 10000,
-    "decay_rate": 0.8,
-    "learning_rate": 1e-3,
+    "decay_rate": 0.9,
+    "learning_rate": 1e-4,
     "early_stop_count": 3,
-    "keep_rate": 1.0,
+    "keep_rate": 0.8,
 
     "vocab_size": vocab_size,
     "emb_size": 200,
-    "batch_size": 100,
+    "batch_size": 40,
 
     "max_turn_num": 10,
     "max_turn_len": 50,

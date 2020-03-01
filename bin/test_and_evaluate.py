@@ -64,7 +64,6 @@ def test(conf, _model):
         score_file_path = conf['save_path'] + '/' + score_test
         score_file = open(score_file_path, 'w')
 
-        sim_his_all, sim_fut_all = [], []
         print(time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())), 'starting test')
         for batch_index in range(test_batch_num):
             feed = {

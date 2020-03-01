@@ -129,7 +129,7 @@ class Net(object):
                             with tf.variable_scope("loss"+str(i)): loss_per, logits_per = layers.loss(j, self.label)
                             loss_list.append(loss_per)
                             logits_list.append(logits_per)
-                        self.trainops[loss_type]["loss"] = sum([((idx+1)/7.0)*item for idx, item in enumerate(loss_list)])
+                        self.trainops[loss_type]["loss"] = sum([((idx+1)/self._conf["ioi_layer_num"])*item for idx, item in enumerate(loss_list)])
                         self.trainops[loss_type]["logits"] = sum(logits_list)
                     else:
                         self.trainops[loss_type]["loss"], self.trainops[loss_type]["logits"] = layers.loss(final_info_cr,
