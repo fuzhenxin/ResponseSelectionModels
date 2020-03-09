@@ -47,6 +47,7 @@ python main.py ubuntu test SMN CHECKPOINT_NAME
 | ----- | ------- | -------- | -------- | -------- | 
 | SMN   |  0.926  |  0.726   |  0.847   |  0.961   | 
 | DAM   |  0.938  |  0.767   |  0.874   |  0.969   | 
+| ESIM  | -       |  0.796   |  0.894   |  0.975   |
 | IoI   |  0.947  |  0.796   |  0.894   |  0.974   | 
 | MSN   | -       |  0.800   |  0.899   |  0.978   | 
 #### Douban Conversation Corpus
@@ -54,14 +55,17 @@ python main.py ubuntu test SMN CHECKPOINT_NAME
 | ----- | ----- | ----- | ----- | -------- | -------- | -------- | 
 | SMN   | 0.529 | 0.569 | 0.397 |  0.233   |  0.396   |  0.724   | 
 | DAM   | 0.550 | 0.601 | 0.427 |  0.254   |  0.410   |  0.757   | 
+| ESIM  | -     | -     | -     |  -       |  -       |  -       |
 | IoI   | 0.573 | 0.621 | 0.444 |  0.269   |  0.451   |  0.786   | 
 | MSN   | 0.587 | 0.632 | 0.470 |  0.295   |  0.452   |  0.788   | 
 #### E-commerce Corpus
 | Model |  R_10@1  |  R_10@2  |  R_10@5  | 
 | ----- | -------- | -------- | -------- | 
 | SMN   |  0.453   |  0.654   |  0.886   | 
+| ESIM  |  0.570   |  0.767   |  0.948   |
 | IoI   |  0.563   |  0.768   |  0.950   | 
 | MSN   |  0.606   |  0.770   |  0.937   | 
+
 
 ### The results of this repo:
 #### Ubuntu Dialogue Corpus V1
@@ -69,29 +73,27 @@ python main.py ubuntu test SMN CHECKPOINT_NAME
 | ----- | ------- | -------- | -------- | -------- | 
 | SMN   |  0.944  |  0.782   |  0.885   |   0.973  | 
 | DAM   |  0.947  |  0.790   |  0.890   |   0.975  | 
-| ESIM  |         |          |          |          | 
+| ESIM  |  0.948  |  0.786   |  0.893   |   0.977  | 
 | IoI   |  0.954  |  0.814   |  0.904   |   0.978  | 
 #### Douban Conversation Corpus
 | Model |  MAP  |  MRR  |  P@1  |  R_10@1  |  R_10@2  |  R_10@5  | 
 | ----- | ----- | ----- | ----- | -------- | -------- | -------- | 
 | SMN   | 0.550 | 0.589 | 0.407 |  0.253   |  0.411   |  0.769   | 
 | DAM   | 0.562 | 0.607 | 0.428 |  0.256   |  0.427   |  0.784   | 
-| ESIM  |       |       |       |          |          |          | 
+| ESIM  | 0.569 | 0.614 | 0.437 |  0.270   |  0.441   |  0.772   | 
 | IoI   | 0.575 | 0.622 | 0.446 |  0.266   |  0.451   |  0.796   | 
 #### E-commerce Corpus
 | Model |  R_10@1  |  R_10@2  |  R_10@5  | 
 | ----- | -------- | -------- | -------- | 
 | SMN   |  0.530   |  0.703   |  0.928   | 
 | DAM   |  0.595   |  0.786   |  0.958   | 
-| ESIM  |          |          |          | 
+| ESIM  |  0.551   |  0.749   |  0.945   | 
 | IoI   |  0.601   |  0.817   |  0.960   | 
-
-
-
 
 ## TODO
 1. Upgrade tendorflow to newer version
 2. Optimizing MSN
+3. For ESIM, the data processing is not standard from their original paper.
 
 ## Reference
 We refer theese papers and repos to build this repo:
